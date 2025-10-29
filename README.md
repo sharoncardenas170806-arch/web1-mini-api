@@ -201,6 +201,5 @@ Este proyecto se distribuye bajo licencia **MIT**
 
 ##  Autora
 
-**Sharon Cárdenas** – *Estudiante de 19 años de Ingeniería de Software*  
-Proyecto académico para la asignatura **Ingeniería Web 1**.  
+  
 
