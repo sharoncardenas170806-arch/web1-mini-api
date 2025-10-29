@@ -80,11 +80,11 @@ const customCss = `
   content: 'Respuestas'; color: #222; position: absolute; left: 0; top: 0;
 }
 
-/* Cabecera tabla: Code/Descripcion/Links -> Código/Descripción/Enlaces */
+/* Cabecera tabla: Code/description/Links -> Código/description/Enlaces */
 .swagger-ui table.responses-table thead th:nth-child(1) { color: transparent !important; position: relative; }
 .swagger-ui table.responses-table thead th:nth-child(1)::after { content: 'Código'; color:#222; position:absolute; left:8px; top:50%; transform:translateY(-50%); }
 .swagger-ui table.responses-table thead th:nth-child(2) { color: transparent !important; position: relative; }
-.swagger-ui table.responses-table thead th:nth-child(2)::after { content: 'Descripción'; color:#222; position:absolute; left:8px; top:50%; transform:translateY(-50%); }
+.swagger-ui table.responses-table thead th:nth-child(2)::after { content: 'description'; color:#222; position:absolute; left:8px; top:50%; transform:translateY(-50%); }
 .swagger-ui table.responses-table thead th:nth-child(3) { color: transparent !important; position: relative; }
 .swagger-ui table.responses-table thead th:nth-child(3)::after { content: 'Enlaces'; color:#222; position:absolute; left:8px; top:50%; transform:translateY(-50%); }
 /* Variantes por clase (Swagger UI nuevas) */

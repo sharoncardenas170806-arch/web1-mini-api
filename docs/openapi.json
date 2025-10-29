@@ -3,7 +3,7 @@
   "info": {
     "title": "API Mini Proyecto – Productos",
     "version": "1.0.0",
-    "descripcion": "API de ejemplo con CRUD de productos, validación, autenticación básica y documentación en Swagger."
+    "description": "API de ejemplo con CRUD de productos, validación, autenticación básica y documentación en Swagger."
   },
 
   "servers": [
@@ -21,7 +21,7 @@
         "tags": ["Sistema"],
         "summary": "Estado del servicio",
         "responses": {
-          "200": { "descripcion": "OK" }
+          "200": { "description": "OK" }
         }
       }
     },
@@ -68,14 +68,14 @@
           }
         ],
         "responses": {
-          "200": { "descripcion": "Listado paginado" }
+          "200": { "description": "Listado paginado" }
         }
       },
 
       "post": {
         "tags": ["Productos"],
         "summary": "Crear producto",
-        "descripcion": "Crea un nuevo producto. Campos requeridos: `name` y `price`.",
+        "description": "Crea un nuevo producto. Campos requeridos: `name` y `price`.",
         "security": [ { "basicAuth": [] } ],
         "requestBody": {
           "required": true,
@@ -86,19 +86,19 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "descripcion": "Nombre del producto (2–60 caracteres)."
+                    "description": "Nombre del producto (2–60 caracteres)."
                   },
                   "price": {
                     "type": "number",
-                    "descripcion": "Precio en moneda local (≥ 0)."
+                    "description": "Precio en moneda local (≥ 0)."
                   },
                   "stock": {
                     "type": "integer",
-                    "descripcion": "Unidades en inventario (≥ 0). Por defecto 0."
+                    "description": "Unidades en inventario (≥ 0). Por defecto 0."
                   },
-                  "descripcion": {
+                  "description": {
                     "type": "string",
-                    "descripcion": "Descripción breve (opcional, máx. 200)."
+                    "description": "Descripción breve (opcional, máx. 200)."
                   }
                 },
                 "required": ["name", "price"],
@@ -106,16 +106,16 @@
                   "name": "Cámara HD",
                   "price": 199.99,
                   "stock": 5,
-                  "descripcion": "1080p, sensor CMOS"
+                  "description": "1080p, sensor CMOS"
                 }
               }
             }
           }
         },
         "responses": {
-          "201": { "descripcion": "Creado: devuelve el producto con su id" },
-          "400": { "descripcion": "Datos inválidos (falló la validación)" },
-          "401": { "descripcion": "No autorizado (falta Basic Auth)" }
+          "201": { "description": "Creado: devuelve el producto con su id" },
+          "400": { "description": "Datos inválidos (falló la validación)" },
+          "401": { "description": "No autorizado (falta Basic Auth)" }
         }
       }
     },
@@ -128,8 +128,8 @@
           { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
         ],
         "responses": {
-          "200": { "descripcion": "OK" },
-          "404": { "descripcion": "No encontrado" }
+          "200": { "description": "OK" },
+          "404": { "description": "No encontrado" }
         }
       },
 
@@ -146,21 +146,21 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "descripcion": "Envíe al menos un campo para actualizar.",
+                "description": "Envíe al menos un campo para actualizar.",
                 "properties": {
-                  "name": { "type": "string", "descripcion": "Nombre (2–60 caracteres)." },
-                  "price": { "type": "number", "descripcion": "Precio (≥ 0)." },
-                  "stock": { "type": "integer", "descripcion": "Stock (≥ 0)." },
-                  "descripcion": { "type": "string", "descripcion": "Descripción (máx. 200)." }
+                  "name": { "type": "string", "description": "Nombre (2–60 caracteres)." },
+                  "price": { "type": "number", "description": "Precio (≥ 0)." },
+                  "stock": { "type": "integer", "description": "Stock (≥ 0)." },
+                  "description": { "type": "string", "description": "Descripción (máx. 200)." }
                 }
               }
             }
           }
         },
         "responses": {
-          "200": { "descripcion": "Actualizado" },
-          "400": { "descripcion": "Datos inválidos" },
-          "404": { "descripcion": "No encontrado" }
+          "200": { "description": "Actualizado" },
+          "400": { "description": "Datos inválidos" },
+          "404": { "description": "No encontrado" }
         }
       },
 
@@ -172,8 +172,8 @@
           { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
         ],
         "responses": {
-          "204": { "descripcion": "Sin contenido (marcado como borrado)" },
-          "404": { "descripcion": "No encontrado" }
+          "204": { "description": "Sin contenido (marcado como borrado)" },
+          "404": { "description": "No encontrado" }
         }
       }
     },
@@ -187,8 +187,8 @@
           { "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }
         ],
         "responses": {
-          "200": { "descripcion": "Restaurado" },
-          "404": { "descripcion": "No encontrado o no está en la papelera" }
+          "200": { "description": "Restaurado" },
+          "404": { "description": "No encontrado o no está en la papelera" }
         }
       }
     }
@@ -199,7 +199,7 @@
       "basicAuth": {
         "type": "http",
         "scheme": "basic",
-        "descripcion": "Usuario y contraseña definidos por variables de entorno (BASIC_USER, BASIC_PASS)."
+        "description": "Usuario y contraseña definidos por variables de entorno (BASIC_USER, BASIC_PASS)."
       }
     }
   }
