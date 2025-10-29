@@ -203,4 +203,4 @@ Este proyecto se distribuye bajo licencia **MIT**
 
 **Sharon Cárdenas** – *Estudiante de 19 años de Ingeniería de Software*  
 Proyecto académico para la asignatura **Ingeniería Web 1**.  
-Si deseas contactarme o revisar el repositorio: *(agrega aquí tu usuario de GitHub o correo si lo deseas)*
+
