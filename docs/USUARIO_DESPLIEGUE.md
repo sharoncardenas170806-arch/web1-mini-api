@@ -26,7 +26,6 @@ Este servicio expone un CRUD de productos con autenticación básica para operac
 El pipeline (`.github/workflows/ci.yml`) ejecuta:
 - Lint
 - Tests con cobertura
-- (opcional) puedes añadir un paso de despliegue a tu plataforma de pruebas.
 
 ## Despliegue con Docker
 ```bash

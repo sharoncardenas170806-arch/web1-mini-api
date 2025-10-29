@@ -1,4 +1,4 @@
-// src/routes/docs.routes.js
+
 import { Router } from 'express'
 import swaggerUi from 'swagger-ui-express'
 import fs from 'fs'
@@ -11,7 +11,6 @@ const __dirname = path.dirname(__filename)
 const openapiPath = path.join(__dirname, '../../docs/openapi.json')
 const openapi = JSON.parse(fs.readFileSync(openapiPath, 'utf-8'))
 
-// ================== CSS: traducción + limpieza (sin JS) ==================
 const customCss = `
 /* ===== LIMPIEZA BÁSICA ===== */
 .swagger-ui .parameter__type,

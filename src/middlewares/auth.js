@@ -7,5 +7,5 @@ export function basicAuth (req, res, next) {
     return next()
   }
   res.set('WWW-Authenticate', 'Basic realm="Área Segura"')
-  return res.status(401).json({ error: 'No autorizado' }) // <-- antes decía "Unauthorized"
+  return res.status(401).json({ error: 'No autorizado' }) 
 }

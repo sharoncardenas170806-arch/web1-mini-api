@@ -1,5 +1,4 @@
 
-
 import {
   listProducts,
   getProduct,
@@ -16,10 +15,10 @@ import { createProductSchema, updateProductSchema } from '../utils/schemas.js'
 export async function list (req, res, next) {
   try {
     const {
-      nombre,           // antes: q
-      precioMinimo,     // antes: minPrice
-      precioMaximo,     // antes: maxPrice
-      pagina = 1,       // antes: page
+      nombre,           
+      precioMinimo,     
+      precioMaximo,     
+      pagina = 1,       
       papelera = 'false'
     } = req.query
 

@@ -22,15 +22,11 @@ app.use('/docs', docsRouter)
 // Alias de salud en español
 app.get('/salud', (req, res) => res.json({ estado: 'ok' }))
 
-// Home -> redirige a Swagger (ya lo habías puesto antes)
+// Home -> redirige a Swagger
 app.get('/', (req, res) => res.redirect('/docs'))
 
 // Evitar 404 de favicon
 app.get('/favicon.ico', (req, res) => res.status(204).end())
-
-
-// Home -> redirige a Swagger
-app.get('/', (req, res) => res.redirect('/docs'))
 
 // Evita el 404 del favicon del navegador
 app.get('/favicon.ico', (req, res) => res.status(204).end())
